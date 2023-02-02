@@ -46,4 +46,3 @@ class Button:
         else:
             self.top_color = self.button_color
         return False
-

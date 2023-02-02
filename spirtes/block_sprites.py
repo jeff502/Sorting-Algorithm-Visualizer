@@ -13,8 +13,3 @@ class BlockSprite(pygame.sprite.Sprite):
         self.image.fill(self.color)
         self.rect = self.image.get_rect()
         self.rect.topleft = [self.x, self.y]
-
-
-
-
-

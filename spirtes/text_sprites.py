@@ -17,3 +17,4 @@ class TextSprite(pygame.sprite.Sprite):
         self.text = text
         self.image = self.font.render(str(self.text), True, self.color)
         self.rect.topleft = [self.x, self.y]
+
