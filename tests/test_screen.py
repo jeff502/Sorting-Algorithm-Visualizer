@@ -50,6 +50,7 @@ def test_create_blocks():
     screen.create_blocks()
     assert len(screen.blocks) == 9
     assert len(screen.block_sprites) == 9
+
     # maybe find a different way to test sprites
 
 
@@ -58,9 +59,54 @@ def test_create_index_display():
     pygame.init()
     screen.create_index_display()
     assert isinstance(screen.index_sprite, pygame.sprite.GroupSingle)
-    for sprite in screen.index_sprite:
-        assert sprite.color == (0, 0, 0)
-        assert sprite.text == "Index: 0"
-        assert sprite.font == pygame.font.SysFont("segoeui", 30)
-        assert sprite.x == 0
-        assert sprite.y == 450
+    for text_sprite in screen.index_sprite:
+        assert text_sprite.color == (0, 0, 0)
+        assert text_sprite.text == "Index: 0"
+        assert text_sprite.x == 0
+        assert text_sprite.y == 450
+
+        # Need to test font size and style
+
+
+def test_create_index_arrow():
+    screen = Screen()
+    pygame.init()
+    screen.create_index_arrow()
+    assert isinstance(screen.arrow_sprite, pygame.sprite.GroupSingle)
+    for text_sprite in screen.arrow_sprite:
+        assert text_sprite.text == "↓"
+        assert text_sprite.color == (0, 0, 0)
+        assert text_sprite.x == 100
+        assert text_sprite.y == 0
+
+
+def test_create_algorithm_info_display():
+    screen = Screen()
+    pygame.init()
+    screen.create_algorithm_info_display()
+
+    # Need to mock/patch algorithm_info to an alg type
+
+
+def test_create_buttons():
+    screen = Screen()
+    pygame.init()
+    screen.create_buttons()
+
+    assert len(screen.alg_buttons) == 3
+    assert "Insertion Sort" in screen.alg_buttons[0].text
+    assert screen.alg_buttons[0].pos == (100, 100)
+    assert "Selection Sort" in screen.alg_buttons[1].text
+    assert screen.alg_buttons[1].pos == (225, 100)
+    assert "Bubble Sort" in screen.alg_buttons[2].text
+    assert screen.alg_buttons[2].pos == (350, 100)
+
+
+def test_create_next_button():
+    screen = Screen()
+    pygame.init()
+    screen.create_next_button()
+
+
+
+
