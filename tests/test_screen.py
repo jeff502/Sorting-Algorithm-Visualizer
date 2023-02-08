@@ -1,6 +1,7 @@
 from gui.screen import Screen
 import pygame
 from unittest.mock import patch
+from gui.button import Button
 
 
 def test_screen():
@@ -106,6 +107,75 @@ def test_create_next_button():
     screen = Screen()
     pygame.init()
     screen.create_next_button()
+
+    assert isinstance(screen.next_button, Button)
+    assert screen.next_button.text == "Next"
+    assert screen.next_button.pos == (750, 350)
+    assert screen.next_button.width == 100
+    assert screen.next_button.height == 100
+
+
+def test_create_complete_banner():
+    screen = Screen()
+    pygame.init()
+    screen.create_complete_banner()
+
+    assert isinstance(screen.complete_sprite, pygame.sprite.GroupSingle)
+    for complete_sprite in screen.complete_sprite:
+        assert complete_sprite.text == "Complete!"
+        assert complete_sprite.color == (0, 0, 0)
+        assert complete_sprite.x == 200
+        assert complete_sprite.y == 0
+        assert complete_sprite.font.get_height() == 134
+
+
+def test_update_blocks():
+    ...
+
+
+def test_update_buttons():
+    ...
+
+
+def test_update_index_display():
+    ...
+
+
+def test_update_arrow_display():
+    ...
+
+
+def test_set_sorting_method():
+    # do 3 of these
+    ...
+
+
+
+def test_start():
+    ...
+
+
+
+def test_event_handler():
+    ...
+
+
+def test_start_up_creation():
+    ...
+
+
+def test_draw_sprites():
+    ...
+
+
+def test_cleanup():
+    ...
+
+
+
+
+
+
 
 
 

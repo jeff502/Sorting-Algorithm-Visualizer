@@ -85,8 +85,7 @@ class Screen:
         self.next_button = button
 
     def create_complete_banner(self):
-        color = (0, 0, 0)
-        complete_banner = TextSprite("Complete!", 100, color, 200, 0)
+        complete_banner = TextSprite("Complete!", 100, (0, 0, 0), 200, 0)
         self.complete_sprite.add(complete_banner)
 
     def update_blocks(self):
