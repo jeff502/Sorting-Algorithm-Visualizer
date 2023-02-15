@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5057909a-7d0a-48ec-a694-2392cddf64d3" name="Changes" comment="WIP Screen Test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/screen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_screen.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +52,7 @@
       <recent name="C:\Users\jeffm\PycharmProjects\sort_alg_visualizer\algs\insertion_sort" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_screen.test_create_complete_banner">
+  <component name="RunManager" selected="Python tests.Python tests for test_screen.test_update_arrow_display">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -75,20 +74,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_screen.test_create_buttons" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="sort_alg_visualizer" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_screen.test_create_buttons&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests for test_screen.test_create_complete_banner" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -103,7 +88,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_screen.test_create_index_arrow" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_screen.test_update_arrow_display" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -113,11 +98,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_screen.test_create_index_arrow&quot;" />
+      <option name="_new_target" value="&quot;test_screen.test_update_arrow_display&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_screen.test_create_next_button" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_screen.test_update_blocks" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -127,11 +112,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_screen.test_create_next_button&quot;" />
+      <option name="_new_target" value="&quot;test_screen.test_update_blocks&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_screen.test_index_arrow" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_screen.test_update_buttons" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -141,17 +126,31 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_screen.test_index_arrow&quot;" />
+      <option name="_new_target" value="&quot;test_screen.test_update_buttons&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_screen.test_update_index_display" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="sort_alg_visualizer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_screen.test_update_index_display&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_screen.test_update_arrow_display" />
+        <item itemvalue="Python tests.Python tests for test_screen.test_update_index_display" />
+        <item itemvalue="Python tests.Python tests for test_screen.test_update_buttons" />
+        <item itemvalue="Python tests.Python tests for test_screen.test_update_blocks" />
         <item itemvalue="Python tests.Python tests for test_screen.test_create_complete_banner" />
-        <item itemvalue="Python tests.Python tests for test_screen.test_create_next_button" />
-        <item itemvalue="Python tests.Python tests for test_screen.test_create_buttons" />
-        <item itemvalue="Python tests.Python tests for test_screen.test_create_index_arrow" />
-        <item itemvalue="Python tests.Python tests for test_screen.test_index_arrow" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675886443892</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="WIP Screen Test">
+      <created>1675888827980</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675888827980</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

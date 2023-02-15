@@ -1,3 +1,7 @@
+import time
+
+import PySimpleGUI
+
 from gui.screen import Screen
 import pygame
 from unittest.mock import patch
@@ -130,19 +134,47 @@ def test_create_complete_banner():
 
 
 def test_update_blocks():
-    ...
+    screen = Screen()
+    pygame.init()
+    screen.create_board()
+    screen.create_blocks()
+    board_length = screen.board_length
+    screen.update_blocks()
+    test_updated_x_pos = [block.x for block in screen.blocks]
+    assert screen.board_length == board_length
+    assert screen.pos_list == test_updated_x_pos
 
 
 def test_update_buttons():
-    ...
+    screen = Screen()
+    pygame.init()
+    screen.create_buttons()
+    screen.update_buttons()
+    button_pos = [button.pos for button in screen.alg_buttons]
+    for b_pos in button_pos:
+        x, y = b_pos
+        r, g, b, _ = pygame.Surface.get_at(screen.window, (x + 5, y + 5))
+        assert (r, g, b) != (0, 0, 0)
 
 
 def test_update_index_display():
-    ...
+    screen = Screen()
+    pygame.init()
+    screen.create_board()
+    screen.create_index_display()
+    index_before_updating = screen.index
+    screen.update_index_display()
+    assert len(screen.index_sprite) == 1
+    assert index_before_updating != screen.index
 
 
 def test_update_arrow_display():
+    screen = Screen()
+    pygame.init()
+    screen.create_board()
+    screen.create_index_arrow()
     ...
+
 
 
 def test_set_sorting_method():
