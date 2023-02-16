@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5057909a-7d0a-48ec-a694-2392cddf64d3" name="Changes" comment="WIP Screen Test">
+    <list default="true" id="5057909a-7d0a-48ec-a694-2392cddf64d3" name="Changes" comment="added test for index display, updating buttons, updating blocks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/algorithms.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_screen.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +29,19 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="a9cd5cfb-32e6-48e3-ba91-2258528f663e" />
+        <option name="url" value="https://github.com/jeff502/Sorting-Algorithm-Visualizer.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -37,14 +51,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jeffm/OneDrive/PycharmProjects/sort_alg_visualizer&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/jeffm/OneDrive/PycharmProjects/sort_alg_visualizer",
+    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jeffm\OneDrive\PycharmProjects\sort_alg_visualizer\gui" />
@@ -52,7 +66,7 @@
       <recent name="C:\Users\jeffm\PycharmProjects\sort_alg_visualizer\algs\insertion_sort" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_screen.test_update_arrow_display">
+  <component name="RunManager" selected="Python tests.Python tests in test_screen.py">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -74,7 +88,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_screen.test_create_complete_banner" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_screen.TestScreen.test_create_algorithm_info_display" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -84,7 +98,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_screen.test_create_complete_banner&quot;" />
+      <option name="_new_target" value="&quot;test_screen.TestScreen.test_create_algorithm_info_display&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -99,20 +113,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_screen.test_update_arrow_display&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_screen.test_update_blocks" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="sort_alg_visualizer" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_screen.test_update_blocks&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -144,13 +144,27 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests in test_screen.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="sort_alg_visualizer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_screen.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in test_screen.py" />
+        <item itemvalue="Python tests.Python tests for test_screen.TestScreen.test_create_algorithm_info_display" />
         <item itemvalue="Python tests.Python tests for test_screen.test_update_arrow_display" />
         <item itemvalue="Python tests.Python tests for test_screen.test_update_index_display" />
         <item itemvalue="Python tests.Python tests for test_screen.test_update_buttons" />
-        <item itemvalue="Python tests.Python tests for test_screen.test_update_blocks" />
-        <item itemvalue="Python tests.Python tests for test_screen.test_create_complete_banner" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +219,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675888827980</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added test for index display, updating buttons, updating blocks">
+      <created>1676493082903</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1676493082903</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added test for index display, updating buttons, updating blocks">
+      <created>1676493131539</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1676493131539</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -228,6 +256,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Getting project ready for GitHub." />
     <MESSAGE value="WIP Screen Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="WIP Screen Test" />
+    <MESSAGE value="added test for index display, updating buttons, updating blocks" />
+    <option name="LAST_COMMIT_MESSAGE" value="added test for index display, updating buttons, updating blocks" />
   </component>
 </project>

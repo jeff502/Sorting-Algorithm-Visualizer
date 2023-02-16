@@ -44,7 +44,7 @@ class SelectionSort:
     @staticmethod
     def algorithm_info():
         return [
-            "The algorithm divides the input list into two parts: a sorted sublist of items which is built up from "
+            "Selection sort divides the input list into two parts: a sorted sublist of items which is built up from "
             "left to right",
             "at the front (left) of the list and a sublist of the remaining unsorted items that occupy the rest of "
             "the list.",
