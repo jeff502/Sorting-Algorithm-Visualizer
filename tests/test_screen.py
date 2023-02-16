@@ -151,7 +151,7 @@ class TestScreen(unittest.TestCase):
         for b_pos in button_pos:
             x, y = b_pos
             r, g, b, _ = pygame.Surface.get_at(self.screen.window, (x + 5, y + 5))
-            assert (r, g, b) != (0, 0, 0)
+            assert (r, g, b) == (87, 155, 177)
 
     def test_update_index_display(self):
         self.screen.create_board()
