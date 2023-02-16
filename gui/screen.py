@@ -37,7 +37,6 @@ class Screen:
         self.complete_sprite = pygame.sprite.GroupSingle()
         self.arrow_sprite = pygame.sprite.GroupSingle()
         self.index_sprite = pygame.sprite.GroupSingle()
-        self.index_text = pygame.sprite.GroupSingle()
         self.algorithm_info = pygame.sprite.Group()
 
     def create_board(self):
@@ -151,7 +150,10 @@ class Screen:
                 self.game_running = False
                 pygame.quit()
                 sys.exit()
-
+            elif event.type == pygame.K_ESCAPE:
+                self.game_running = False
+                pygame.quit()
+                sys.exit()
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 if self.next_button:
                     if self.next_button.check_button_clicked():

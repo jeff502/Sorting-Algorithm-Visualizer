@@ -1,5 +1,6 @@
 import pygame
 import unittest
+import asyncio
 from unittest.mock import patch
 
 from gui.screen import Screen
@@ -86,7 +87,7 @@ class TestScreen(unittest.TestCase):
             "Insertion Sort": InsertionSort,
             "Selection Sort": SelectionSort,
             "Bubble Sort": BubbleSort
-                              }
+            }
         for name, sort_class in sorting_algorithms.items():
             self.screen.set_sorting_method(name)
             self.screen.create_algorithm_info_display()
@@ -167,8 +168,19 @@ class TestScreen(unittest.TestCase):
         ...
 
     def test_set_sorting_method(self):
-        # do 3 of these
-        ...
+        sorting_dict = {
+            "Insertion Sort": InsertionSort,
+            "Selection Sort": SelectionSort,
+            "Bubble Sort": BubbleSort
+        }
+        for name, sorting_class in sorting_dict.items():
+            self.screen.set_sorting_method(name)
+            assert isinstance(self.screen.sort_method, sorting_class)
+            if name == "Insertion Sort":
+                assert self.screen.extra_loop is True
+            else:
+                assert self.screen.extra_loop is False
+            self.screen.extra_loop = False
 
     def test_start(self):
         ...
@@ -177,7 +189,14 @@ class TestScreen(unittest.TestCase):
         ...
 
     def test_start_up_creation(self):
-        ...
+        self.screen.start_up_creation("Insertion Sort")
+        assert self.screen.board is not None
+        assert len(self.screen.blocks) == 9
+        assert len(self.screen.index_sprite) == 1
+        assert self.screen.sort_method is not None
+        assert self.screen.next_button is not None
+        assert self.screen.alg_button_pressed is True
+        assert self.screen.blocks_created is True
 
     def test_draw_sprites(self):
         ...
