@@ -60,7 +60,7 @@ class Screen:
         self.index_sprite.add(index_display)
 
     def create_index_arrow(self, x=100):
-        arrow_display = TextSprite(f"↓", 40, (0, 0, 0), x, 0)
+        arrow_display = TextSprite(f"↓", 40, (255, 255, 255), x, 0)
         self.arrow_sprite.add(arrow_display)
 
     def create_algorithm_info_display(self):
@@ -150,10 +150,11 @@ class Screen:
                 self.game_running = False
                 pygame.quit()
                 sys.exit()
-            elif event.type == pygame.K_ESCAPE:
-                self.game_running = False
-                pygame.quit()
-                sys.exit()
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:
+                    self.game_running = False
+                    pygame.quit()
+                    sys.exit()
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 if self.next_button:
                     if self.next_button.check_button_clicked():

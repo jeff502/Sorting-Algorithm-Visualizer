@@ -164,8 +164,20 @@ class TestScreen(unittest.TestCase):
 
     def test_update_arrow_display(self):
         self.screen.create_board()
-        self.screen.create_index_arrow()
-        ...
+        self.screen.index = 1
+        self.screen.board_length = 10
+        self.screen.update_arrow_display()
+        for sprite in self.screen.arrow_sprite:
+            assert sprite.x == 175
+
+        self.screen.index = 2
+        self.screen.update_arrow_display()
+        for sprite in self.screen.arrow_sprite:
+            assert sprite.x == 250
+
+        self.screen.index = 200
+        for sprite in self.screen.arrow_sprite:
+            assert sprite.x == 250
 
     def test_set_sorting_method(self):
         sorting_dict = {
@@ -199,10 +211,44 @@ class TestScreen(unittest.TestCase):
         assert self.screen.blocks_created is True
 
     def test_draw_sprites(self):
-        ...
+        self.screen.create_board()
+        self.screen.create_blocks()
+        self.screen.create_index_arrow()
+        self.screen.create_index_display()
+        self.screen.window.fill(self.screen.background)
+        self.screen.draw_sprites()
+
+        for block in self.screen.blocks:
+            r, g, b, _ = self.screen.window.get_at((block.x, block.y))
+            assert (r, g, b) in self.screen.colors
+
+        for index_sprite in self.screen.index_sprite:
+            r, g, b, _ = self.screen.window.get_at((index_sprite.x+3, index_sprite.y+12))
+            assert (r, g, b) == index_sprite.color
+
+        for arrow_sprite in self.screen.arrow_sprite:
+            r, g, b, _ = self.screen.window.get_at((arrow_sprite.x+5, arrow_sprite.y+39))
+            assert (r, g, b) == arrow_sprite.color
 
     def test_cleanup(self):
-        ...
+        self.screen.start_up_creation("Insertion Sort")
+        self.screen.cleanup()
+        r, g, b, _ = self.screen.window.get_at((0, 0))
+        assert (r, g, b) == self.screen.background
+        assert len(self.screen.block_sprites) == 0
+        assert len(self.screen.index_sprite) == 0
+        assert len(self.screen.arrow_sprite) == 0
+        assert len(self.screen.blocks) == 0
+        assert self.screen.index == 0
+        assert self.screen.shown_alg_info is False
+        assert self.screen.complete is False
+        assert self.screen.blocks_created is False
+        assert self.screen.alg_button_pressed is False
+        assert self.screen.pause_game is True
+        assert self.screen.extra_loop is False
+
+
+
 
 
 if __name__ == "__main__":
