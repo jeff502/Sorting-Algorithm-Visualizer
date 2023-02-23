@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5057909a-7d0a-48ec-a694-2392cddf64d3" name="Changes" comment="Removed index_text&#10;Added test_start_up_creation and test_set_sorting_method">
+    <list default="true" id="5057909a-7d0a-48ec-a694-2392cddf64d3" name="Changes" comment="Added: esc key press to close program, test_draw_sprites, test_cleanup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui/screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/screen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_screen.py" afterDir="false" />
@@ -56,7 +56,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/jeffm/OneDrive/PycharmProjects/sort_alg_visualizer&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -66,7 +66,7 @@
       <recent name="C:\Users\jeffm\PycharmProjects\sort_alg_visualizer\algs\insertion_sort" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_screen.TestScreen.test_update_arrow_display">
+  <component name="RunManager" selected="Python tests.Python tests in test_screen.py">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -88,63 +88,63 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_screen.TestScreen.test_cleanup" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_game_start.TestScreen.test_event_handler_with_mouse_button_down" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spirtes" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_screen.TestScreen.test_cleanup&quot;" />
+      <option name="_new_target" value="&quot;test_game_start.TestScreen.test_event_handler_with_mouse_button_down&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_screen.TestScreen.test_draw_sprites" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_game_start.TestScreen.test_event_handler_with_mouse_button_down_bubble_sort" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spirtes" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_screen.TestScreen.test_draw_sprites&quot;" />
+      <option name="_new_target" value="&quot;test_game_start.TestScreen.test_event_handler_with_mouse_button_down_bubble_sort&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_screen.TestScreen.test_start_up_creation" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_game_start.TestScreen.test_event_handler_with_mouse_button_down_insertion_sort" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spirtes" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_screen.TestScreen.test_start_up_creation&quot;" />
+      <option name="_new_target" value="&quot;test_game_start.TestScreen.test_event_handler_with_mouse_button_down_insertion_sort&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_screen.TestScreen.test_update_arrow_display" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_game_start.TestScreen.test_event_handler_with_mouse_button_down_selection_sort" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spirtes" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_screen.TestScreen.test_update_arrow_display&quot;" />
+      <option name="_new_target" value="&quot;test_game_start.TestScreen.test_event_handler_with_mouse_button_down_selection_sort&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_algorithms.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in test_screen.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -154,17 +154,17 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_algorithms.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_screen.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_screen.TestScreen.test_update_arrow_display" />
-        <item itemvalue="Python tests.Python tests for test_screen.TestScreen.test_cleanup" />
-        <item itemvalue="Python tests.Python tests for test_screen.TestScreen.test_draw_sprites" />
-        <item itemvalue="Python tests.Python tests in test_algorithms.py" />
-        <item itemvalue="Python tests.Python tests for test_screen.TestScreen.test_start_up_creation" />
+        <item itemvalue="Python tests.Python tests in test_screen.py" />
+        <item itemvalue="Python tests.Python tests for test_game_start.TestScreen.test_event_handler_with_mouse_button_down_bubble_sort" />
+        <item itemvalue="Python tests.Python tests for test_game_start.TestScreen.test_event_handler_with_mouse_button_down_selection_sort" />
+        <item itemvalue="Python tests.Python tests for test_game_start.TestScreen.test_event_handler_with_mouse_button_down_insertion_sort" />
+        <item itemvalue="Python tests.Python tests for test_game_start.TestScreen.test_event_handler_with_mouse_button_down" />
       </list>
     </recent_temporary>
   </component>
@@ -254,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676581361347</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added: esc key press to close program, test_draw_sprites, test_cleanup">
+      <created>1676670875316</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1676670875316</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -281,6 +288,7 @@
     <MESSAGE value="Refactored testing to inheriate from unittest.Testcase, added setUp and tearDown methods, created test for create_algorithm_info_display, refactored selection sort alg info" />
     <MESSAGE value="changed assert in test_update_buttons to check for the button rbg values" />
     <MESSAGE value="Removed index_text&#10;Added test_start_up_creation and test_set_sorting_method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed index_text&#10;Added test_start_up_creation and test_set_sorting_method" />
+    <MESSAGE value="Added: esc key press to close program, test_draw_sprites, test_cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added: esc key press to close program, test_draw_sprites, test_cleanup" />
   </component>
 </project>

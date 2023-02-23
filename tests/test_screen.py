@@ -1,7 +1,7 @@
 import pygame
 import unittest
 import asyncio
-from unittest.mock import patch
+from unittest.mock import patch, Mock, MagicMock
 
 from gui.screen import Screen
 from gui.button import Button
@@ -194,11 +194,8 @@ class TestScreen(unittest.TestCase):
                 assert self.screen.extra_loop is False
             self.screen.extra_loop = False
 
-    def test_start(self):
-        ...
-
     def test_event_handler(self):
-        ...
+        self.screen.event_handler()
 
     def test_start_up_creation(self):
         self.screen.start_up_creation("Insertion Sort")
@@ -247,9 +244,87 @@ class TestScreen(unittest.TestCase):
         assert self.screen.pause_game is True
         assert self.screen.extra_loop is False
 
+    def test_event_handler_with_escape(self):
+        with patch('pygame.event.get', return_value=[pygame.event.Event(pygame.KEYDOWN, {'key': pygame.K_ESCAPE})]):
+            assert self.screen.game_running is True
+            self.screen.event_handler()
+            assert self.screen.game_running is False
 
+    def test_event_handler_pygame_quit(self):
+        with patch('pygame.event.get', return_value=[pygame.event.Event(pygame.QUIT)]):
+            assert self.screen.game_running is True
+            self.screen.event_handler()
+            assert self.screen.game_running is False
 
+    def test_event_handler_with_mouse_button_down_insertion_sort(self):
+        self.screen.window.fill(self.screen.background)
+        self.screen.create_buttons()
+        button_mock = [True, False, False]
 
+        with patch('pygame.event.get', return_value=[
+            pygame.event.Event(pygame.MOUSEBUTTONDOWN, {'button': 1, 'pos': (100, 100)})
+        ]), \
+                patch.object(Button, 'check_button_clicked', side_effect=button_mock):
+            assert self.screen.game_running is True
+
+            self.screen.event_handler()
+            assert self.screen.game_running is True
+            assert self.screen.board is not None
+            assert len(self.screen.blocks) == 9
+            assert self.screen.index_sprite is not None
+            assert self.screen.arrow_sprite is not None
+            assert self.screen.sort_method.__class__.__name__ == "InsertionSort"
+            assert self.screen.algorithm_info is not None
+            assert self.screen.next_button is not None
+            assert self.screen.alg_button_pressed is True
+            assert self.screen.blocks_created is True
+
+    def test_event_handler_with_mouse_button_down_selection_sort(self):
+        self.screen.window.fill(self.screen.background)
+        self.screen.create_buttons()
+        button_mock = [False, True, False]
+
+        with patch('pygame.event.get', return_value=[
+            pygame.event.Event(pygame.MOUSEBUTTONDOWN, {'button': 1, 'pos': (100, 100)})
+        ]), \
+                patch.object(Button, 'check_button_clicked', side_effect=button_mock):
+            assert self.screen.game_running is True
+            self.screen.event_handler()
+            assert self.screen.game_running is True
+            assert self.screen.board is not None
+            assert len(self.screen.blocks) == 9
+            assert self.screen.index_sprite is not None
+            assert self.screen.arrow_sprite is not None
+            assert self.screen.sort_method.__class__.__name__ == "SelectionSort"
+            assert self.screen.algorithm_info is not None
+            assert self.screen.next_button is not None
+            assert self.screen.alg_button_pressed is True
+            assert self.screen.blocks_created is True
+
+    def test_event_handler_with_mouse_button_down_bubble_sort(self):
+        self.screen.window.fill(self.screen.background)
+        self.screen.create_buttons()
+        button_mock = [False, False, True]
+
+        with patch('pygame.event.get', return_value=[
+            pygame.event.Event(pygame.MOUSEBUTTONDOWN, {'button': 1, 'pos': (100, 100)})
+        ]), \
+                patch.object(Button, 'check_button_clicked', side_effect=button_mock):
+            assert self.screen.game_running is True
+            self.screen.event_handler()
+            assert self.screen.game_running is True
+            assert self.screen.board is not None
+            assert len(self.screen.blocks) == 9
+            assert self.screen.index_sprite is not None
+            assert self.screen.arrow_sprite is not None
+            assert self.screen.sort_method.__class__.__name__ == "BubbleSort"
+            assert self.screen.algorithm_info is not None
+            assert self.screen.next_button is not None
+            assert self.screen.alg_button_pressed is True
+            assert self.screen.blocks_created is True
+
+    def test_start(self):
+        ...
 
 if __name__ == "__main__":
     unittest.main()
