@@ -71,7 +71,7 @@ class Screen:
             self.algorithm_info.add(algorithm_info_display)
             y += 50
 
-    def create_buttons(self):
+    def create_sorting_buttons(self):
         algorithms = ["Insertion Sort", "Selection Sort", "Bubble Sort"]
         x = 100
         for alg in algorithms:
@@ -118,7 +118,7 @@ class Screen:
 
     def start(self):
         self.window.fill(self.background)
-        self.create_buttons()
+        self.create_sorting_buttons()
         clock = pygame.time.Clock()
         while self.game_running:
             self.event_handler()
@@ -170,7 +170,8 @@ class Screen:
                                 self.update_blocks()
                                 self.update_index_display()
                                 self.update_arrow_display()
-                                if self.sort_method.counter > len(self.blocks) and not self.extra_loop:
+                                if self.sort_method.counter == len(self.blocks) and not self.extra_loop:
+                                    print("this line ran", self.sort_method, self.sort_method.counter)
                                     self.complete = True
                 for b in self.alg_buttons:
                     button_pressed = b.check_button_clicked()

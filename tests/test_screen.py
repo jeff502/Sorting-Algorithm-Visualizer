@@ -106,7 +106,7 @@ class TestScreen(unittest.TestCase):
             self.screen.algorithm_info.empty()
 
     def test_create_buttons(self):
-        self.screen.create_buttons()
+        self.screen.create_sorting_buttons()
 
         assert len(self.screen.alg_buttons) == 3
         assert "Insertion Sort" in self.screen.alg_buttons[0].text
@@ -146,7 +146,7 @@ class TestScreen(unittest.TestCase):
         assert self.screen.pos_list == test_updated_x_pos
 
     def test_update_buttons(self):
-        self.screen.create_buttons()
+        self.screen.create_sorting_buttons()
         self.screen.update_buttons()
         button_pos = [button.pos for button in self.screen.alg_buttons]
         for b_pos in button_pos:
@@ -212,7 +212,6 @@ class TestScreen(unittest.TestCase):
         self.screen.create_blocks()
         self.screen.create_index_arrow()
         self.screen.create_index_display()
-        self.screen.window.fill(self.screen.background)
         self.screen.draw_sprites()
 
         for block in self.screen.blocks:
@@ -257,8 +256,7 @@ class TestScreen(unittest.TestCase):
             assert self.screen.game_running is False
 
     def test_event_handler_with_mouse_button_down_insertion_sort(self):
-        self.screen.window.fill(self.screen.background)
-        self.screen.create_buttons()
+        self.screen.create_sorting_buttons()
         button_mock = [True, False, False]
 
         with patch('pygame.event.get', return_value=[
@@ -280,8 +278,7 @@ class TestScreen(unittest.TestCase):
             assert self.screen.blocks_created is True
 
     def test_event_handler_with_mouse_button_down_selection_sort(self):
-        self.screen.window.fill(self.screen.background)
-        self.screen.create_buttons()
+        self.screen.create_sorting_buttons()
         button_mock = [False, True, False]
 
         with patch('pygame.event.get', return_value=[
@@ -302,8 +299,7 @@ class TestScreen(unittest.TestCase):
             assert self.screen.blocks_created is True
 
     def test_event_handler_with_mouse_button_down_bubble_sort(self):
-        self.screen.window.fill(self.screen.background)
-        self.screen.create_buttons()
+        self.screen.create_sorting_buttons()
         button_mock = [False, False, True]
 
         with patch('pygame.event.get', return_value=[
@@ -323,8 +319,137 @@ class TestScreen(unittest.TestCase):
             assert self.screen.alg_button_pressed is True
             assert self.screen.blocks_created is True
 
+    def test_event_handler_next_button_shown_alg_info(self):
+        self.screen.create_next_button()
+
+        button_mock = [True]
+
+        with patch('pygame.event.get', return_value=[
+            pygame.event.Event(pygame.MOUSEBUTTONDOWN, {'button': 1, 'pos': (100, 100)})
+        ]), \
+                patch.object(Button, 'check_button_clicked', side_effect=button_mock):
+            # Write a test for self.screen.pause_game
+            assert self.screen.game_running is True
+            assert self.screen.shown_alg_info is False
+            self.screen.event_handler()
+            assert self.screen.shown_alg_info is True
+            assert self.screen.pause_game is False
+
+    def test_event_handler_next_button_alg_button_pressed_check_counter_complete(self):
+        # Testing if screen.sort_method.counter >= len(self.blocks) self.complete == True
+        self.screen.create_next_button()
+        self.screen.alg_button_pressed = True
+        self.screen.shown_alg_info = True
+        self.screen.create_board()
+        self.screen.create_blocks() # Len of blocks == 9
+        self.screen.set_sorting_method("Insertion Sort")
+        button_mock = [True]
+
+        with patch('pygame.event.get', return_value=[
+            pygame.event.Event(pygame.MOUSEBUTTONDOWN, {'button': 1, 'pos': (100, 100)})
+        ]), \
+                patch.object(Button, 'check_button_clicked', side_effect=button_mock):
+
+            self.screen.sort_method.counter = 9
+            assert self.screen.complete is False
+            self.screen.event_handler()
+            assert self.screen.complete is True
+
+    def test_event_handler_next_button_and_alg_button_pressed_check_counter_not_completed(self):
+        # Testing the "else" with counter at 0
+        self.screen.create_next_button()
+        self.screen.alg_button_pressed = True
+        self.screen.shown_alg_info = True
+
+        self.screen.create_board()
+        self.screen.create_blocks()
+        self.screen.create_index_arrow()
+        self.screen.set_sorting_method("Insertion Sort")
+        button_mock = [True]
+
+        with patch('pygame.event.get', return_value=[
+            pygame.event.Event(pygame.MOUSEBUTTONDOWN, {'button': 1, 'pos': (100, 100)})
+        ]), \
+                patch.object(Button, 'check_button_clicked', side_effect=button_mock):
+
+            assert self.screen.game_running is True
+            assert self.screen.shown_alg_info is True
+            assert self.screen.complete is False
+            assert self.screen.sort_method.counter == 0
+            assert self.screen.index == 0
+            for arrow in self.screen.arrow_sprite:
+                assert arrow.x == 100
+            for index, block in enumerate(self.screen.blocks):
+                assert block.x == self.screen.pos_list[index]
+
+            self.screen.event_handler()
+
+            assert self.screen.sort_method.counter == 1
+            assert self.screen.index == 1
+
+            assert self.screen.complete is False
+            assert self.screen.shown_alg_info is True
+            assert self.screen.pause_game is False
+            for arrow in self.screen.arrow_sprite:
+                assert arrow.x == 175
+            for index, block in enumerate(self.screen.blocks):
+                assert block.x == self.screen.pos_list[index]
+
+    def test_event_handler_selection_sort_equal_after_sorting(self):
+        # Testing self.screen.sort_method.counter == len(self.blocks) after the line
+        # "self.blocks = self.sort_method.sort()" and update methods ran.
+        self.screen.create_next_button()
+        self.screen.alg_button_pressed = True
+        self.screen.shown_alg_info = True
+
+        self.screen.create_board()
+        self.screen.create_blocks()
+        self.screen.create_index_arrow()
+        self.screen.set_sorting_method("Selection Sort")  # Insertion Sort would flag "screen.extra_loop" to True.
+        self.screen.sort_method.counter = 8  # Setting counter to be larger than the length of self.blocks
+        button_mock = [True]
+
+        with patch('pygame.event.get', return_value=[
+            pygame.event.Event(pygame.MOUSEBUTTONDOWN, {'button': 1, 'pos': (100, 100)})
+        ]), \
+                patch.object(Button, 'check_button_clicked', side_effect=button_mock):
+
+            assert self.screen.extra_loop is False
+            assert self.screen.complete is False
+            self.screen.event_handler()
+            assert self.screen.complete is True
+
+    def test_event_handler_insertion_sort_equal_after_update(self):
+        # Testing self.complete == False
+        # Insertion Sort flags screen.extra_loop
+        self.screen.create_next_button()
+        self.screen.alg_button_pressed = True
+        self.screen.shown_alg_info = True
+
+        self.screen.create_board()
+        self.screen.create_blocks()
+        self.screen.create_index_arrow()
+        self.screen.set_sorting_method("Insertion Sort")  # Insertion Sort would flag "screen.extra_loop" to True.
+        self.screen.sort_method.counter = 8  # Setting counter to be larger than the length of self.blocks
+        button_mock = [True]
+
+        with patch('pygame.event.get', return_value=[
+            pygame.event.Event(pygame.MOUSEBUTTONDOWN, {'button': 1, 'pos': (100, 100)})
+        ]), \
+                patch.object(Button, 'check_button_clicked', side_effect=button_mock):
+
+            print(self.screen.sort_method.counter, len(self.screen.blocks))
+            assert self.screen.extra_loop is True
+            assert self.screen.complete is False
+            self.screen.event_handler()
+            assert self.screen.complete is False
+
+    def test_event_handler_next_button_pause_game(self):
+        ...
+
     def test_start(self):
         ...
+
 
 if __name__ == "__main__":
     unittest.main()
