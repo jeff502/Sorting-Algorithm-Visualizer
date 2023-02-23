@@ -1,10 +1,15 @@
+from spirtes.block_sprites import BlockSprite
+
+
 class InsertionSort:
     def __init__(self, blocks):
         self.counter = 0
         self.blocks = blocks
         self.block_len = len(self.blocks)
 
-    def sort(self) -> tuple[list, int]:
+    def sort(self) -> list[BlockSprite]:
+        if self.counter >= self.block_len:
+            return self.blocks
         for index in range(1, self.block_len):
             current_value = self.blocks[self.counter]
             position = self.counter
@@ -32,7 +37,9 @@ class SelectionSort:
         self.blocks = blocks
         self.block_len = len(self.blocks)
 
-    def sort(self) -> tuple[list, int]:
+    def sort(self) -> list[BlockSprite]:
+        if self.counter >= self.block_len:
+            return self.blocks
         min_index = self.counter
         for i in range(self.counter+1, self.block_len):
             if self.blocks[i].height < self.blocks[min_index].height:
@@ -64,7 +71,9 @@ class BubbleSort:
         self.blocks = blocks
         self.block_len = len(self.blocks)
 
-    def sort(self):
+    def sort(self) -> list[BlockSprite]:
+        if self.counter >= self.block_len:
+            return self.blocks
         for j in range(self.block_len - self.counter - 1):
             if self.blocks[j].height > self.blocks[j + 1].height:
                 self.blocks[j], self.blocks[j + 1] = self.blocks[j + 1], self.blocks[j]

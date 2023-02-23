@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5057909a-7d0a-48ec-a694-2392cddf64d3" name="Changes" comment="Added: Added new test for event handler and changed the arrow display to (0, 0, 0)">
+    <list default="true" id="5057909a-7d0a-48ec-a694-2392cddf64d3" name="Changes" comment="Added: many new test for screen.event_handler()&#10;Refactored: &quot;create_buttons&quot; to &quot;create_sorting_buttons&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/screen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/algorithms.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_algorithms.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_algorithms.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +67,7 @@
       <recent name="C:\Users\jeffm\PycharmProjects\sort_alg_visualizer\algs\insertion_sort" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_screen.py">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -89,35 +89,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_game_start.TestScreen.test_event_handler_with_mouse_button_down" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="sort_alg_visualizer" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spirtes" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_game_start.TestScreen.test_event_handler_with_mouse_button_down&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_game_start.TestScreen.test_event_handler_with_mouse_button_down_bubble_sort" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="sort_alg_visualizer" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spirtes" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_game_start.TestScreen.test_event_handler_with_mouse_button_down_bubble_sort&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_screen.TestScreen.test_event_handler_extra_loop_complete_flag" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_algorithms.TestSelectionSort" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -127,11 +99,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_screen.TestScreen.test_event_handler_extra_loop_complete_flag&quot;" />
+      <option name="_new_target" value="&quot;test_algorithms.TestSelectionSort&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_screen.TestScreen.test_event_handler_insertion_sort_equal_after_update" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_algorithms.TestSelectionSort.test_sort" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -141,11 +113,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_screen.TestScreen.test_event_handler_insertion_sort_equal_after_update&quot;" />
+      <option name="_new_target" value="&quot;test_algorithms.TestSelectionSort.test_sort&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_screen.TestScreen.test_event_handler_next_button_alg_button_pressed_check_counter_complete" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_algorithms.TestSelectionSort.test_sort_nine_times" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -155,11 +127,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_screen.TestScreen.test_event_handler_next_button_alg_button_pressed_check_counter_complete&quot;" />
+      <option name="_new_target" value="&quot;test_algorithms.TestSelectionSort.test_sort_nine_times&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_screen.TestScreen.test_event_handler_next_button_and_alg_button_pressed_check_counter_not_completed" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_algorithms.TestSelectionSort.test_sort_several_times" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -169,7 +141,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_screen.TestScreen.test_event_handler_next_button_and_alg_button_pressed_check_counter_not_completed&quot;" />
+      <option name="_new_target" value="&quot;test_algorithms.TestSelectionSort.test_sort_several_times&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -201,21 +173,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.test_game_start" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="sort_alg_visualizer" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spirtes" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_game_start&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests in test_screen.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in test_algorithms.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -225,17 +183,17 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_screen.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_algorithms.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in test_screen.py" />
-        <item itemvalue="Python tests.Python tests for test_screen.TestScreen.test_event_handler_next_button_alg_button_pressed_check_counter_complete" />
-        <item itemvalue="Python tests.Python tests for test_screen.TestScreen.test_event_handler_next_button_and_alg_button_pressed_check_counter_not_completed" />
-        <item itemvalue="Python tests.Python tests for test_screen.TestScreen.test_event_handler_extra_loop_complete_flag" />
-        <item itemvalue="Python tests.Python tests for test_screen.TestScreen.test_event_handler_insertion_sort_equal_after_update" />
+        <item itemvalue="Python tests.Python tests in test_algorithms.py" />
+        <item itemvalue="Python tests.Python tests for test_algorithms.TestSelectionSort.test_sort_nine_times" />
+        <item itemvalue="Python tests.Python tests for test_algorithms.TestSelectionSort.test_sort_several_times" />
+        <item itemvalue="Python tests.Python tests for test_algorithms.TestSelectionSort.test_sort" />
+        <item itemvalue="Python tests.Python tests for test_algorithms.TestSelectionSort" />
       </list>
     </recent_temporary>
   </component>
@@ -339,7 +297,21 @@
       <option name="project" value="LOCAL" />
       <updated>1677116038076</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added: many new test for screen.event_handler()&#10;Refactored: &quot;create_buttons&quot; to &quot;create_sorting_buttons&quot;">
+      <created>1677182487422</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1677182487422</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Added: many new test for screen.event_handler()&#10;Refactored: &quot;create_buttons&quot; to &quot;create_sorting_buttons&quot;">
+      <created>1677182510905</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1677182510905</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -368,6 +340,7 @@
     <MESSAGE value="Removed index_text&#10;Added test_start_up_creation and test_set_sorting_method" />
     <MESSAGE value="Added: esc key press to close program, test_draw_sprites, test_cleanup" />
     <MESSAGE value="Added: Added new test for event handler and changed the arrow display to (0, 0, 0)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added: Added new test for event handler and changed the arrow display to (0, 0, 0)" />
+    <MESSAGE value="Added: many new test for screen.event_handler()&#10;Refactored: &quot;create_buttons&quot; to &quot;create_sorting_buttons&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added: many new test for screen.event_handler()&#10;Refactored: &quot;create_buttons&quot; to &quot;create_sorting_buttons&quot;" />
   </component>
 </project>
