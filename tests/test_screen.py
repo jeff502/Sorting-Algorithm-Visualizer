@@ -438,7 +438,6 @@ class TestScreen(unittest.TestCase):
         ]), \
                 patch.object(Button, 'check_button_clicked', side_effect=button_mock):
 
-            print(self.screen.sort_method.counter, len(self.screen.blocks))
             assert self.screen.extra_loop is True
             assert self.screen.complete is False
             self.screen.event_handler()
