@@ -1,4 +1,3 @@
-import sys
 from random import shuffle
 
 import pygame
@@ -97,7 +96,8 @@ class Screen:
             b.draw_button()
 
     def update_index_display(self):
-        self.index += 1
+        if self.index < 8:
+            self.index += 1
         self.index_sprite.empty()
         self.create_index_display()
         self.index_sprite.draw(self.window)
@@ -171,7 +171,6 @@ class Screen:
                                 self.update_index_display()
                                 self.update_arrow_display()
                                 if self.sort_method.counter == len(self.blocks) and not self.extra_loop:
-                                    print("this line ran", self.sort_method, self.sort_method.counter)
                                     self.complete = True
                 for b in self.alg_buttons:
                     button_pressed = b.check_button_clicked()
@@ -199,11 +198,12 @@ class Screen:
         self.block_sprites.empty()
         self.index_sprite.empty()
         self.arrow_sprite.empty()
+        self.algorithm_info.empty()
         self.blocks = []
         self.index = 0
         self.shown_alg_info = False
         self.complete = False
         self.blocks_created = False
         self.alg_button_pressed = False
-        self.pause_game = True
+        self.pause_game = False
         self.extra_loop = False
