@@ -160,6 +160,14 @@ class TestScreen(unittest.TestCase):
         assert len(self.screen.index_sprite) == 1
         assert index_before_updating != self.screen.index
 
+    def test_update_index_display_index_limit(self):
+        self.screen.create_board()
+        self.screen.create_index_display()
+        self.screen.index = 8
+        self.screen.update_index_display()
+        assert len(self.screen.index_sprite) == 1
+        assert self.screen.index == 8
+
     def test_update_arrow_display(self):
         self.screen.create_board()
         self.screen.index = 1
@@ -238,7 +246,7 @@ class TestScreen(unittest.TestCase):
         assert self.screen.complete is False
         assert self.screen.blocks_created is False
         assert self.screen.alg_button_pressed is False
-        assert self.screen.pause_game is True
+        assert self.screen.pause_game is False
         assert self.screen.extra_loop is False
 
     def test_event_handler_with_escape(self):
