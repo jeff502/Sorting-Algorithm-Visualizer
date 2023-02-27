@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5057909a-7d0a-48ec-a694-2392cddf64d3" name="Changes" comment="Getting project ready for GitHub.">
+    <list default="true" id="5057909a-7d0a-48ec-a694-2392cddf64d3" name="Changes" comment="added a requirements.txt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +20,26 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="new-alg-testing" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="a9cd5cfb-32e6-48e3-ba91-2258528f663e" />
+        <option name="url" value="https://github.com/jeff502/Sorting-Algorithm-Visualizer.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -35,60 +54,19 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jeffm/OneDrive/PycharmProjects/sort_alg_visualizer&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jeffm/OneDrive/PycharmProjects/Stretching_timer&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jeffm\OneDrive\PycharmProjects\sort_alg_visualizer\tests" />
       <recent name="C:\Users\jeffm\OneDrive\PycharmProjects\sort_alg_visualizer\gui" />
       <recent name="C:\Users\jeffm\OneDrive\PycharmProjects\sort_alg_visualizer\spirtes" />
       <recent name="C:\Users\jeffm\PycharmProjects\sort_alg_visualizer\algs\insertion_sort" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
-    <configuration name="blocks" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="sort_alg_visualizer" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/blocks.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="event" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="sort_alg_visualizer" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/event.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Python tests for test_button.TestScreen.test_check_button_clicked">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -110,76 +88,83 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pygame_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_button.TestScreen.test_check_button_clicked" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pygame_test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_button.TestScreen.test_check_button_clicked&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="screen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_screen.TestScreen.test_cleanup" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\jeffm\OneDrive\PycharmProjects\sort_alg_visualizer\gui\screen.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_screen.TestScreen.test_cleanup&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="selection_sort" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_screen.TestScreen.test_update_index_display_index_limit" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithms" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithms/selection_sort.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_screen.TestScreen.test_update_index_display_index_limit&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_algorithms.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="sort_alg_visualizer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_algorithms.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in tests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="sort_alg_visualizer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.screen" />
-        <item itemvalue="Python.event" />
-        <item itemvalue="Python.blocks" />
-        <item itemvalue="Python.selection_sort" />
-        <item itemvalue="Python.pygame_test" />
+        <item itemvalue="Python tests.Python tests for test_button.TestScreen.test_check_button_clicked" />
+        <item itemvalue="Python tests.Python tests for test_screen.TestScreen.test_update_index_display_index_limit" />
+        <item itemvalue="Python tests.Python tests in tests" />
+        <item itemvalue="Python tests.Python tests for test_screen.TestScreen.test_cleanup" />
+        <item itemvalue="Python tests.Python tests in test_algorithms.py" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +191,126 @@
       <option name="project" value="LOCAL" />
       <updated>1675367327889</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Getting project ready for GitHub.">
+      <created>1675368385653</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675368385653</updated>
+    </task>
+    <task id="LOCAL-00004" summary="WIP Screen Test">
+      <created>1675883493132</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675883493132</updated>
+    </task>
+    <task id="LOCAL-00005" summary="WIP Screen Test">
+      <created>1675886443892</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675886443892</updated>
+    </task>
+    <task id="LOCAL-00006" summary="WIP Screen Test">
+      <created>1675888827980</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675888827980</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added test for index display, updating buttons, updating blocks">
+      <created>1676493082903</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1676493082903</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added test for index display, updating buttons, updating blocks">
+      <created>1676493131539</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1676493131539</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Refactored testing to inheriate from unittest.Testcase, added setUp and tearDown methods, created test for create_algorithm_info_display, refactored selection sort alg info">
+      <created>1676573078448</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676573078448</updated>
+    </task>
+    <task id="LOCAL-00010" summary="changed assert in test_update_buttons to check for the button rbg values">
+      <created>1676573190286</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1676573190286</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Removed index_text&#10;Added test_start_up_creation and test_set_sorting_method">
+      <created>1676581361347</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1676581361347</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added: esc key press to close program, test_draw_sprites, test_cleanup">
+      <created>1676670875316</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1676670875316</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added: Added new test for event handler and changed the arrow display to (0, 0, 0)">
+      <created>1677116038076</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1677116038076</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added: many new test for screen.event_handler()&#10;Refactored: &quot;create_buttons&quot; to &quot;create_sorting_buttons&quot;">
+      <created>1677182487422</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1677182487422</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Added: many new test for screen.event_handler()&#10;Refactored: &quot;create_buttons&quot; to &quot;create_sorting_buttons&quot;">
+      <created>1677182510905</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1677182510905</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added: new unit test for InsertionSort and SelectionSort. Started the ground work for Bubblesort">
+      <created>1677193020654</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1677193020654</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Fixed a bug preventing show_alg_info from showing on the second loop.&#10;Added: a self.algorithm_info.empty() to clean_up, added a guard measure to stop index from going past 9. Would happen in Insertion Sort">
+      <created>1677273232304</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1677273232304</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fixed test_clean_up to reflex new changes to clean_up. Added new test for index_display to check max index == 8">
+      <created>1677282447754</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1677282447754</updated>
+    </task>
+    <task id="LOCAL-00019" summary="added a requirements.txt">
+      <created>1677282811108</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1677282811109</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -228,6 +332,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Getting project ready for GitHub." />
-    <option name="LAST_COMMIT_MESSAGE" value="Getting project ready for GitHub." />
+    <MESSAGE value="WIP Screen Test" />
+    <MESSAGE value="added test for index display, updating buttons, updating blocks" />
+    <MESSAGE value="Refactored testing to inheriate from unittest.Testcase, added setUp and tearDown methods, created test for create_algorithm_info_display, refactored selection sort alg info" />
+    <MESSAGE value="changed assert in test_update_buttons to check for the button rbg values" />
+    <MESSAGE value="Removed index_text&#10;Added test_start_up_creation and test_set_sorting_method" />
+    <MESSAGE value="Added: esc key press to close program, test_draw_sprites, test_cleanup" />
+    <MESSAGE value="Added: Added new test for event handler and changed the arrow display to (0, 0, 0)" />
+    <MESSAGE value="Added: many new test for screen.event_handler()&#10;Refactored: &quot;create_buttons&quot; to &quot;create_sorting_buttons&quot;" />
+    <MESSAGE value="Added: new unit test for InsertionSort and SelectionSort. Started the ground work for Bubblesort" />
+    <MESSAGE value="Fixed a bug preventing show_alg_info from showing on the second loop.&#10;Added: a self.algorithm_info.empty() to clean_up, added a guard measure to stop index from going past 9. Would happen in Insertion Sort" />
+    <MESSAGE value="Fixed test_clean_up to reflex new changes to clean_up. Added new test for index_display to check max index == 8" />
+    <MESSAGE value="added a requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="added a requirements.txt" />
   </component>
 </project>

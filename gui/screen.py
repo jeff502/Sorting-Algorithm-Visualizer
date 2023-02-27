@@ -1,4 +1,3 @@
-import sys
 from random import shuffle
 
 import pygame
@@ -37,7 +36,6 @@ class Screen:
         self.complete_sprite = pygame.sprite.GroupSingle()
         self.arrow_sprite = pygame.sprite.GroupSingle()
         self.index_sprite = pygame.sprite.GroupSingle()
-        self.index_text = pygame.sprite.GroupSingle()
         self.algorithm_info = pygame.sprite.Group()
 
     def create_board(self):
@@ -72,7 +70,7 @@ class Screen:
             self.algorithm_info.add(algorithm_info_display)
             y += 50
 
-    def create_buttons(self):
+    def create_sorting_buttons(self):
         algorithms = ["Insertion Sort", "Selection Sort", "Bubble Sort"]
         x = 100
         for alg in algorithms:
@@ -85,8 +83,7 @@ class Screen:
         self.next_button = button
 
     def create_complete_banner(self):
-        color = (0, 0, 0)
-        complete_banner = TextSprite("Complete!", 100, color, 200, 0)
+        complete_banner = TextSprite("Complete!", 100, (0, 0, 0), 200, 0)
         self.complete_sprite.add(complete_banner)
 
     def update_blocks(self):
@@ -99,7 +96,8 @@ class Screen:
             b.draw_button()
 
     def update_index_display(self):
-        self.index += 1
+        if self.index < 8:
+            self.index += 1
         self.index_sprite.empty()
         self.create_index_display()
         self.index_sprite.draw(self.window)
@@ -120,7 +118,7 @@ class Screen:
 
     def start(self):
         self.window.fill(self.background)
-        self.create_buttons()
+        self.create_sorting_buttons()
         clock = pygame.time.Clock()
         while self.game_running:
             self.event_handler()
@@ -151,8 +149,10 @@ class Screen:
             if event.type == pygame.QUIT:
                 self.game_running = False
                 pygame.quit()
-                sys.exit()
-
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:
+                    self.game_running = False
+                    pygame.quit()
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 if self.next_button:
                     if self.next_button.check_button_clicked():
@@ -170,7 +170,7 @@ class Screen:
                                 self.update_blocks()
                                 self.update_index_display()
                                 self.update_arrow_display()
-                                if self.sort_method.counter > len(self.blocks) and not self.extra_loop:
+                                if self.sort_method.counter == len(self.blocks) and not self.extra_loop:
                                     self.complete = True
                 for b in self.alg_buttons:
                     button_pressed = b.check_button_clicked()
@@ -198,11 +198,12 @@ class Screen:
         self.block_sprites.empty()
         self.index_sprite.empty()
         self.arrow_sprite.empty()
+        self.algorithm_info.empty()
         self.blocks = []
         self.index = 0
         self.shown_alg_info = False
         self.complete = False
         self.blocks_created = False
         self.alg_button_pressed = False
-        self.pause_game = True
+        self.pause_game = False
         self.extra_loop = False
