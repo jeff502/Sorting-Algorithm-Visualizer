@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5057909a-7d0a-48ec-a694-2392cddf64d3" name="Changes" comment="added a requirements.txt">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5057909a-7d0a-48ec-a694-2392cddf64d3" name="Changes" comment="Added test for the `button` class" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +64,7 @@
       <recent name="C:\Users\jeffm\PycharmProjects\sort_alg_visualizer\algs\insertion_sort" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_button.TestScreen.test_check_button_clicked">
+  <component name="RunManager" selected="Python tests.Python tests in test_button.py">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -130,7 +128,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_algorithms.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in test_button.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -140,7 +138,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_algorithms.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_button.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -160,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in test_button.py" />
         <item itemvalue="Python tests.Python tests for test_button.TestScreen.test_check_button_clicked" />
         <item itemvalue="Python tests.Python tests for test_screen.TestScreen.test_update_index_display_index_limit" />
         <item itemvalue="Python tests.Python tests in tests" />
         <item itemvalue="Python tests.Python tests for test_screen.TestScreen.test_cleanup" />
-        <item itemvalue="Python tests.Python tests in test_algorithms.py" />
       </list>
     </recent_temporary>
   </component>
@@ -310,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677282811109</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added test for the `button` class">
+      <created>1677525162690</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1677525162690</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -344,6 +349,7 @@
     <MESSAGE value="Fixed a bug preventing show_alg_info from showing on the second loop.&#10;Added: a self.algorithm_info.empty() to clean_up, added a guard measure to stop index from going past 9. Would happen in Insertion Sort" />
     <MESSAGE value="Fixed test_clean_up to reflex new changes to clean_up. Added new test for index_display to check max index == 8" />
     <MESSAGE value="added a requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a requirements.txt" />
+    <MESSAGE value="Added test for the `button` class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added test for the `button` class" />
   </component>
 </project>

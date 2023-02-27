@@ -69,3 +69,7 @@ class MockRect(pygame.Rect):
 
     def collidepoint(self, *args):
         return self._collidepoint_return_value
+
+
+if __name__ == '__main__':
+    unittest.main()
