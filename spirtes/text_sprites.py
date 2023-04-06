@@ -2,7 +2,9 @@ import pygame
 
 
 class TextSprite(pygame.sprite.Sprite):
-    def __init__(self, text: str, size: int, color: tuple[int, int, int], x: int, y: int):
+    def __init__(
+        self, text: str, size: int, color: tuple[int, int, int], x: int, y: int
+    ):
         super().__init__()
         self.color = color
         self.font = pygame.font.SysFont("segoeui", size)
@@ -17,4 +19,3 @@ class TextSprite(pygame.sprite.Sprite):
         self.text = text
         self.image = self.font.render(str(self.text), True, self.color)
         self.rect.topleft = [self.x, self.y]
-

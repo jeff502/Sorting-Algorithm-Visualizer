@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5057909a-7d0a-48ec-a694-2392cddf64d3" name="Changes" comment="Added test for the `button` class" />
+    <list default="true" id="5057909a-7d0a-48ec-a694-2392cddf64d3" name="Changes" comment="Added: `if __name__ == '__main__':&#10;    unittest.main()`">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +54,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jeffm/OneDrive/PycharmProjects/Stretching_timer&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jeffm/OneDrive/PycharmProjects/sort_alg_visualizer&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
@@ -64,7 +66,7 @@
       <recent name="C:\Users\jeffm\PycharmProjects\sort_alg_visualizer\algs\insertion_sort" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_button.py">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="sort_alg_visualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -158,10 +160,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in tests" />
         <item itemvalue="Python tests.Python tests in test_button.py" />
         <item itemvalue="Python tests.Python tests for test_button.TestScreen.test_check_button_clicked" />
         <item itemvalue="Python tests.Python tests for test_screen.TestScreen.test_update_index_display_index_limit" />
-        <item itemvalue="Python tests.Python tests in tests" />
         <item itemvalue="Python tests.Python tests for test_screen.TestScreen.test_cleanup" />
       </list>
     </recent_temporary>
@@ -315,7 +317,21 @@
       <option name="project" value="LOCAL" />
       <updated>1677525162690</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Added: `if __name__ == '__main__':&#10;    unittest.main()`">
+      <created>1677525478225</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1677525478225</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Added: `if __name__ == '__main__':&#10;    unittest.main()`">
+      <created>1677525538708</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1677525538708</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -350,6 +366,7 @@
     <MESSAGE value="Fixed test_clean_up to reflex new changes to clean_up. Added new test for index_display to check max index == 8" />
     <MESSAGE value="added a requirements.txt" />
     <MESSAGE value="Added test for the `button` class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added test for the `button` class" />
+    <MESSAGE value="Added: `if __name__ == '__main__':&#10;    unittest.main()`" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added: `if __name__ == '__main__':&#10;    unittest.main()`" />
   </component>
 </project>
