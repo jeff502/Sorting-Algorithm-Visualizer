@@ -6,13 +6,10 @@ from gui.button import Button
 
 
 class TestScreen(unittest.TestCase):
-
     def setUp(self):
         pygame.init()
         self.test_surface = pygame.display.set_mode((900, 500))
-        self.button = Button(
-            (0, 0), 100, 100, "Testing", self.test_surface
-        )
+        self.button = Button((0, 0), 100, 100, "Testing", self.test_surface)
 
     def tearDown(self) -> None:
         self.button = None
@@ -39,10 +36,9 @@ class TestScreen(unittest.TestCase):
         self.button.draw_button()
         assert self.test_surface.get_at((5, 5)) == self.button.button_color
 
-    @patch('pygame.mouse.get_pressed', return_value=[True, False, False])
-    @patch('pygame.mouse.get_pos', return_value=(0, 0))
+    @patch("pygame.mouse.get_pressed", return_value=[True, False, False])
+    @patch("pygame.mouse.get_pos", return_value=(0, 0))
     def test_check_button_clicked(self, mock_get_pos, mock_get_pressed):
-
         # Create a mock rect that always returns True for collide point
         mock_rect = MockRect(0, 0, 100, 100)
         mock_rect._collidepoint_return_value = True
@@ -71,5 +67,5 @@ class MockRect(pygame.Rect):
         return self._collidepoint_return_value
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -18,8 +18,18 @@ class Screen:
         pygame.display.set_caption("Algorithm Visualizer")
         self.background = (248, 244, 234)
         self.pos_list = [75, 150, 225, 300, 375, 450, 525, 600, 675]
-        self.colors = [(0, 0, 0), (127, 127, 127), (255, 0, 0), (0, 255, 0), (0, 0, 255),
-                       (255, 255, 0), (0, 255, 255), (255, 0, 255), (165, 42, 42), (102, 0, 204)]
+        self.colors = [
+            (0, 0, 0),
+            (127, 127, 127),
+            (255, 0, 0),
+            (0, 255, 0),
+            (0, 0, 255),
+            (255, 255, 0),
+            (0, 255, 255),
+            (255, 0, 255),
+            (165, 42, 42),
+            (102, 0, 204),
+        ]
         self.board = None
         self.board_length = None
         self.blocks = []
@@ -105,13 +115,27 @@ class Screen:
     def update_arrow_display(self):
         if self.index >= self.board_length:
             return
-        index_pos = {0: 100, 1: 175, 2: 250, 3: 325, 4: 400, 5: 475, 6: 550, 7: 625, 8: 700}
+        index_pos = {
+            0: 100,
+            1: 175,
+            2: 250,
+            3: 325,
+            4: 400,
+            5: 475,
+            6: 550,
+            7: 625,
+            8: 700,
+        }
         self.arrow_sprite.empty()
         self.create_index_arrow(index_pos[self.index])
         self.arrow_sprite.draw(self.window)
 
     def set_sorting_method(self, name):
-        sorting_dict = {"Insertion Sort": InsertionSort, "Selection Sort": SelectionSort, "Bubble Sort": BubbleSort}
+        sorting_dict = {
+            "Insertion Sort": InsertionSort,
+            "Selection Sort": SelectionSort,
+            "Bubble Sort": BubbleSort,
+        }
         if sorting_dict[name] == InsertionSort:
             self.extra_loop = True
         self.sort_method = sorting_dict[name](self.blocks)
@@ -170,7 +194,10 @@ class Screen:
                                 self.update_blocks()
                                 self.update_index_display()
                                 self.update_arrow_display()
-                                if self.sort_method.counter == len(self.blocks) and not self.extra_loop:
+                                if (
+                                    self.sort_method.counter == len(self.blocks)
+                                    and not self.extra_loop
+                                ):
                                     self.complete = True
                 for b in self.alg_buttons:
                     button_pressed = b.check_button_clicked()

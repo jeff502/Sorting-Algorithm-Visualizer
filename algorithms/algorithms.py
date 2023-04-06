@@ -13,7 +13,9 @@ class InsertionSort:
         for index in range(1, self.block_len):
             current_value = self.blocks[self.counter]
             position = self.counter
-            while position > 0 and self.blocks[position - 1].height > current_value.height:
+            while (
+                position > 0 and self.blocks[position - 1].height > current_value.height
+            ):
                 self.blocks[position] = self.blocks[position - 1]
                 position -= 1
             self.blocks[position] = current_value
@@ -27,8 +29,8 @@ class InsertionSort:
             "comparisons.",
             "In this visualization, you'll see an array being updated one item at a time as the index increases.",
             "Time complexity: Best: Ω(n), Average: Θ(n^2), Worst: O(n^2)",
-            "Space Complexity: O(1)"
-            ]
+            "Space Complexity: O(1)",
+        ]
 
 
 class SelectionSort:
@@ -41,10 +43,13 @@ class SelectionSort:
         if self.counter >= self.block_len:
             return self.blocks
         min_index = self.counter
-        for i in range(self.counter+1, self.block_len):
+        for i in range(self.counter + 1, self.block_len):
             if self.blocks[i].height < self.blocks[min_index].height:
                 min_index = i
-        self.blocks[self.counter], self.blocks[min_index] = self.blocks[min_index], self.blocks[self.counter]
+        self.blocks[self.counter], self.blocks[min_index] = (
+            self.blocks[min_index],
+            self.blocks[self.counter],
+        )
         self.counter += 1
         return self.blocks
 
@@ -61,7 +66,7 @@ class SelectionSort:
             "unsorted element (putting it in sorted order), and moving the sublist boundaries one element to the "
             "right. ",
             "Time complexity: Best: O(n^2), Average: O(n^2), Worst: O(n^2)",
-            "Space Complexity: O(1)"
+            "Space Complexity: O(1)",
         ]
 
 
@@ -86,5 +91,5 @@ class BubbleSort:
             "Bubble sort is a simple sorting algorithm that repeatedly steps through the input list element by element,",
             "comparing the current element with the one after it, exchanging their values if needed.",
             "Time complexity: Best: O(n), Average: O(n^2), Worst: O(n^2)",
-            "Space Complexity: O(1)"
+            "Space Complexity: O(1)",
         ]

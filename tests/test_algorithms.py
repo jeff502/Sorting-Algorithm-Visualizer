@@ -1,12 +1,10 @@
 import unittest
-from random import shuffle
 
 from algorithms.algorithms import InsertionSort, SelectionSort, BubbleSort
 from spirtes.block_sprites import BlockSprite
 
 
 class TestInsertionSort(unittest.TestCase):
-
     def setUp(self):
         block_values = [201, 101, 301, 51, 1, 151, 401, 351, 251]
         self.blocks = [BlockSprite(0, h, (0, 0, 0)) for h in block_values]
@@ -63,13 +61,12 @@ class TestInsertionSort(unittest.TestCase):
             "comparisons.",
             "In this visualization, you'll see an array being updated one item at a time as the index increases.",
             "Time complexity: Best: Ω(n), Average: Θ(n^2), Worst: O(n^2)",
-            "Space Complexity: O(1)"
-            ]
+            "Space Complexity: O(1)",
+        ]
         assert self.sorter.algorithm_info() == expected_output
 
 
 class TestSelectionSort(unittest.TestCase):
-
     def setUp(self):
         block_values = [201, 101, 301, 51, 1, 151, 401, 351, 251]
         self.blocks = [BlockSprite(0, h, (0, 0, 0)) for h in block_values]
@@ -89,13 +86,33 @@ class TestSelectionSort(unittest.TestCase):
 
     def test_sort_once(self):
         self.sorter.sort()
-        assert [b.height for b in self.sorter.blocks] == [1, 101, 301, 51, 201, 151, 401, 351, 251]
+        assert [b.height for b in self.sorter.blocks] == [
+            1,
+            101,
+            301,
+            51,
+            201,
+            151,
+            401,
+            351,
+            251,
+        ]
         assert self.sorter.counter == 1
 
     def test_sort_several_times(self):
         for i in range(5):
             self.sorter.sort()
-        assert [b.height for b in self.sorter.blocks] == [1, 51, 101, 151, 201, 301, 401, 351, 251]
+        assert [b.height for b in self.sorter.blocks] == [
+            1,
+            51,
+            101,
+            151,
+            201,
+            301,
+            401,
+            351,
+            251,
+        ]
         assert self.sorter.counter == 5
 
     def test_sort_nine_times(self):
@@ -115,13 +132,25 @@ class TestSelectionSort(unittest.TestCase):
         assert self.sorter.sort() == []
 
     def test_sort_already_sorted(self):
-        self.sorter = SelectionSort([BlockSprite(0, 1, (0, 0, 0)), BlockSprite(0, 2, (0, 0, 0)), BlockSprite(0, 3, (0, 0, 0))])
-        assert[b.height for b in self.sorter.sort()] == [1, 2, 3]
+        self.sorter = SelectionSort(
+            [
+                BlockSprite(0, 1, (0, 0, 0)),
+                BlockSprite(0, 2, (0, 0, 0)),
+                BlockSprite(0, 3, (0, 0, 0)),
+            ]
+        )
+        assert [b.height for b in self.sorter.sort()] == [1, 2, 3]
 
     def test_sort_duplicate_vals(self):
         self.sorter = SelectionSort(
-            [BlockSprite(0, 3, (0, 0, 0)), BlockSprite(0, 2, (0, 0, 0)), BlockSprite(0, 1, (0, 0, 0)),
-             BlockSprite(0, 2, (0, 0, 0)), BlockSprite(0, 3, (0, 0, 0))])
+            [
+                BlockSprite(0, 3, (0, 0, 0)),
+                BlockSprite(0, 2, (0, 0, 0)),
+                BlockSprite(0, 1, (0, 0, 0)),
+                BlockSprite(0, 2, (0, 0, 0)),
+                BlockSprite(0, 3, (0, 0, 0)),
+            ]
+        )
         for i in range(0, len(self.sorter.blocks)):
             self.sorter.sort()
         assert [b.height for b in self.sorter.sort()] == [1, 2, 2, 3, 3]
@@ -138,13 +167,12 @@ class TestSelectionSort(unittest.TestCase):
             "unsorted element (putting it in sorted order), and moving the sublist boundaries one element to the "
             "right. ",
             "Time complexity: Best: O(n^2), Average: O(n^2), Worst: O(n^2)",
-            "Space Complexity: O(1)"
+            "Space Complexity: O(1)",
         ]
         assert self.sorter.algorithm_info() == expected_output
 
 
 class TestBubbleSort(unittest.TestCase):
-
     def setUp(self):
         block_values = [201, 101, 301, 51, 1, 151, 401, 351, 251]
         self.blocks = [BlockSprite(0, h, (0, 0, 0)) for h in block_values]
@@ -165,13 +193,33 @@ class TestBubbleSort(unittest.TestCase):
 
     def test_sort_once(self):
         self.sorter.sort()
-        assert [b.height for b in self.sorter.blocks] == [101, 201, 51, 1, 151, 301, 351, 251, 401]
+        assert [b.height for b in self.sorter.blocks] == [
+            101,
+            201,
+            51,
+            1,
+            151,
+            301,
+            351,
+            251,
+            401,
+        ]
         assert self.sorter.counter == 1
 
     def test_sort_three_times(self):
         for i in range(3):
             self.sorter.sort()
-        assert [b.height for b in self.sorter.blocks] == [51, 1, 101, 151, 201, 251, 301, 351, 401]
+        assert [b.height for b in self.sorter.blocks] == [
+            51,
+            1,
+            101,
+            151,
+            201,
+            251,
+            301,
+            351,
+            401,
+        ]
         assert self.sorter.counter == 3
 
     def test_sort_nine_times(self):
@@ -191,13 +239,25 @@ class TestBubbleSort(unittest.TestCase):
         assert self.sorter.sort() == []
 
     def test_sort_already_sorted(self):
-        self.sorter = BubbleSort([BlockSprite(0, 1, (0, 0, 0)), BlockSprite(0, 2, (0, 0, 0)), BlockSprite(0, 3, (0, 0, 0))])
-        assert[b.height for b in self.sorter.sort()] == [1, 2, 3]
+        self.sorter = BubbleSort(
+            [
+                BlockSprite(0, 1, (0, 0, 0)),
+                BlockSprite(0, 2, (0, 0, 0)),
+                BlockSprite(0, 3, (0, 0, 0)),
+            ]
+        )
+        assert [b.height for b in self.sorter.sort()] == [1, 2, 3]
 
     def test_sort_duplicate_vals(self):
         self.sorter = BubbleSort(
-            [BlockSprite(0, 3, (0, 0, 0)), BlockSprite(0, 2, (0, 0, 0)), BlockSprite(0, 1, (0, 0, 0)),
-             BlockSprite(0, 2, (0, 0, 0)), BlockSprite(0, 3, (0, 0, 0))])
+            [
+                BlockSprite(0, 3, (0, 0, 0)),
+                BlockSprite(0, 2, (0, 0, 0)),
+                BlockSprite(0, 1, (0, 0, 0)),
+                BlockSprite(0, 2, (0, 0, 0)),
+                BlockSprite(0, 3, (0, 0, 0)),
+            ]
+        )
         for i in range(0, len(self.sorter.blocks)):
             self.sorter.sort()
         assert [b.height for b in self.sorter.sort()] == [1, 2, 2, 3, 3]
@@ -207,10 +267,10 @@ class TestBubbleSort(unittest.TestCase):
             "Bubble sort is a simple sorting algorithm that repeatedly steps through the input list element by element,",
             "comparing the current element with the one after it, exchanging their values if needed.",
             "Time complexity: Best: O(n), Average: O(n^2), Worst: O(n^2)",
-            "Space Complexity: O(1)"
+            "Space Complexity: O(1)",
         ]
         assert self.sorter.algorithm_info() == expected_output
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

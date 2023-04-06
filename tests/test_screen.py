@@ -1,15 +1,12 @@
 import pygame
 import unittest
-import asyncio
-from unittest.mock import patch, Mock, MagicMock
-
+from unittest.mock import patch
 from gui.screen import Screen
 from gui.button import Button
 from algorithms.algorithms import BubbleSort, SelectionSort, InsertionSort
 
 
 class TestScreen(unittest.TestCase):
-
     def setUp(self):
         self.screen = Screen()
         pygame.init()
@@ -34,11 +31,24 @@ class TestScreen(unittest.TestCase):
         assert self.screen.complete is False
         assert self.screen.extra_loop is False
         assert self.screen.window == pygame.display.set_mode((900, 500))
-        assert pygame.display.get_caption() == ('Algorithm Visualizer', 'Algorithm Visualizer')
+        assert pygame.display.get_caption() == (
+            "Algorithm Visualizer",
+            "Algorithm Visualizer",
+        )
         assert self.screen.background == (248, 244, 234)
         assert self.screen.pos_list == [75, 150, 225, 300, 375, 450, 525, 600, 675]
-        assert self.screen.colors == [(0, 0, 0), (127, 127, 127), (255, 0, 0), (0, 255, 0), (0, 0, 255),
-                                      (255, 255, 0), (0, 255, 255), (255, 0, 255), (165, 42, 42), (102, 0, 204)]
+        assert self.screen.colors == [
+            (0, 0, 0),
+            (127, 127, 127),
+            (255, 0, 0),
+            (0, 255, 0),
+            (0, 0, 255),
+            (255, 255, 0),
+            (0, 255, 255),
+            (255, 0, 255),
+            (165, 42, 42),
+            (102, 0, 204),
+        ]
 
         assert isinstance(self.screen.block_sprites, pygame.sprite.Group)
         assert isinstance(self.screen.complete_sprite, pygame.sprite.GroupSingle)
@@ -84,7 +94,7 @@ class TestScreen(unittest.TestCase):
         sorting_algorithms = {
             "Insertion Sort": InsertionSort,
             "Selection Sort": SelectionSort,
-            "Bubble Sort": BubbleSort
+            "Bubble Sort": BubbleSort,
         }
         for name, sort_class in sorting_algorithms.items():
             self.screen.set_sorting_method(name)
@@ -189,7 +199,7 @@ class TestScreen(unittest.TestCase):
         sorting_dict = {
             "Insertion Sort": InsertionSort,
             "Selection Sort": SelectionSort,
-            "Bubble Sort": BubbleSort
+            "Bubble Sort": BubbleSort,
         }
         for name, sorting_class in sorting_dict.items():
             self.screen.set_sorting_method(name)
@@ -225,11 +235,15 @@ class TestScreen(unittest.TestCase):
             assert (r, g, b) in self.screen.colors
 
         for index_sprite in self.screen.index_sprite:
-            r, g, b, _ = self.screen.window.get_at((index_sprite.x + 3, index_sprite.y + 12))
+            r, g, b, _ = self.screen.window.get_at(
+                (index_sprite.x + 3, index_sprite.y + 12)
+            )
             assert (r, g, b) == index_sprite.color
 
         for arrow_sprite in self.screen.arrow_sprite:
-            r, g, b, _ = self.screen.window.get_at((arrow_sprite.x + 5, arrow_sprite.y + 39))
+            r, g, b, _ = self.screen.window.get_at(
+                (arrow_sprite.x + 5, arrow_sprite.y + 39)
+            )
             assert (r, g, b) == arrow_sprite.color
 
     def test_cleanup(self):
@@ -250,13 +264,16 @@ class TestScreen(unittest.TestCase):
         assert self.screen.extra_loop is False
 
     def test_event_handler_with_escape(self):
-        with patch('pygame.event.get', return_value=[pygame.event.Event(pygame.KEYDOWN, {'key': pygame.K_ESCAPE})]):
+        with patch(
+            "pygame.event.get",
+            return_value=[pygame.event.Event(pygame.KEYDOWN, {"key": pygame.K_ESCAPE})],
+        ):
             assert self.screen.game_running is True
             self.screen.event_handler()
             assert self.screen.game_running is False
 
     def test_event_handler_pygame_quit(self):
-        with patch('pygame.event.get', return_value=[pygame.event.Event(pygame.QUIT)]):
+        with patch("pygame.event.get", return_value=[pygame.event.Event(pygame.QUIT)]):
             assert self.screen.game_running is True
             self.screen.event_handler()
             assert self.screen.game_running is False
@@ -265,10 +282,14 @@ class TestScreen(unittest.TestCase):
         self.screen.create_sorting_buttons()
         button_mock = [True, False, False]
 
-        with patch('pygame.event.get', return_value=[
-            pygame.event.Event(pygame.MOUSEBUTTONDOWN, {'button': 1, 'pos': (100, 100)})
-        ]), \
-                patch.object(Button, 'check_button_clicked', side_effect=button_mock):
+        with patch(
+            "pygame.event.get",
+            return_value=[
+                pygame.event.Event(
+                    pygame.MOUSEBUTTONDOWN, {"button": 1, "pos": (100, 100)}
+                )
+            ],
+        ), patch.object(Button, "check_button_clicked", side_effect=button_mock):
             assert self.screen.game_running is True
 
             self.screen.event_handler()
@@ -287,10 +308,14 @@ class TestScreen(unittest.TestCase):
         self.screen.create_sorting_buttons()
         button_mock = [False, True, False]
 
-        with patch('pygame.event.get', return_value=[
-            pygame.event.Event(pygame.MOUSEBUTTONDOWN, {'button': 1, 'pos': (100, 100)})
-        ]), \
-                patch.object(Button, 'check_button_clicked', side_effect=button_mock):
+        with patch(
+            "pygame.event.get",
+            return_value=[
+                pygame.event.Event(
+                    pygame.MOUSEBUTTONDOWN, {"button": 1, "pos": (100, 100)}
+                )
+            ],
+        ), patch.object(Button, "check_button_clicked", side_effect=button_mock):
             assert self.screen.game_running is True
             self.screen.event_handler()
             assert self.screen.game_running is True
@@ -308,10 +333,14 @@ class TestScreen(unittest.TestCase):
         self.screen.create_sorting_buttons()
         button_mock = [False, False, True]
 
-        with patch('pygame.event.get', return_value=[
-            pygame.event.Event(pygame.MOUSEBUTTONDOWN, {'button': 1, 'pos': (100, 100)})
-        ]), \
-                patch.object(Button, 'check_button_clicked', side_effect=button_mock):
+        with patch(
+            "pygame.event.get",
+            return_value=[
+                pygame.event.Event(
+                    pygame.MOUSEBUTTONDOWN, {"button": 1, "pos": (100, 100)}
+                )
+            ],
+        ), patch.object(Button, "check_button_clicked", side_effect=button_mock):
             assert self.screen.game_running is True
             self.screen.event_handler()
             assert self.screen.game_running is True
@@ -330,10 +359,14 @@ class TestScreen(unittest.TestCase):
 
         button_mock = [True]
 
-        with patch('pygame.event.get', return_value=[
-            pygame.event.Event(pygame.MOUSEBUTTONDOWN, {'button': 1, 'pos': (100, 100)})
-        ]), \
-                patch.object(Button, 'check_button_clicked', side_effect=button_mock):
+        with patch(
+            "pygame.event.get",
+            return_value=[
+                pygame.event.Event(
+                    pygame.MOUSEBUTTONDOWN, {"button": 1, "pos": (100, 100)}
+                )
+            ],
+        ), patch.object(Button, "check_button_clicked", side_effect=button_mock):
             # Write a test for self.screen.pause_game
             assert self.screen.game_running is True
             assert self.screen.shown_alg_info is False
@@ -351,16 +384,22 @@ class TestScreen(unittest.TestCase):
         self.screen.set_sorting_method("Insertion Sort")
         button_mock = [True]
 
-        with patch('pygame.event.get', return_value=[
-            pygame.event.Event(pygame.MOUSEBUTTONDOWN, {'button': 1, 'pos': (100, 100)})
-        ]), \
-                patch.object(Button, 'check_button_clicked', side_effect=button_mock):
+        with patch(
+            "pygame.event.get",
+            return_value=[
+                pygame.event.Event(
+                    pygame.MOUSEBUTTONDOWN, {"button": 1, "pos": (100, 100)}
+                )
+            ],
+        ), patch.object(Button, "check_button_clicked", side_effect=button_mock):
             self.screen.sort_method.counter = 9
             assert self.screen.complete is False
             self.screen.event_handler()
             assert self.screen.complete is True
 
-    def test_event_handler_next_button_and_alg_button_pressed_check_counter_not_completed(self):
+    def test_event_handler_next_button_and_alg_button_pressed_check_counter_not_completed(
+        self,
+    ):
         # Testing the "else" with counter at 0
         self.screen.create_next_button()
         self.screen.alg_button_pressed = True
@@ -372,11 +411,14 @@ class TestScreen(unittest.TestCase):
         self.screen.set_sorting_method("Insertion Sort")
         button_mock = [True]
 
-        with patch('pygame.event.get', return_value=[
-            pygame.event.Event(pygame.MOUSEBUTTONDOWN, {'button': 1, 'pos': (100, 100)})
-        ]), \
-                patch.object(Button, 'check_button_clicked', side_effect=button_mock):
-
+        with patch(
+            "pygame.event.get",
+            return_value=[
+                pygame.event.Event(
+                    pygame.MOUSEBUTTONDOWN, {"button": 1, "pos": (100, 100)}
+                )
+            ],
+        ), patch.object(Button, "check_button_clicked", side_effect=button_mock):
             assert self.screen.game_running is True
             assert self.screen.shown_alg_info is True
             assert self.screen.complete is False
@@ -410,14 +452,22 @@ class TestScreen(unittest.TestCase):
         self.screen.create_board()
         self.screen.create_blocks()
         self.screen.create_index_arrow()
-        self.screen.set_sorting_method("Selection Sort")  # Insertion Sort would flag "screen.extra_loop" to True.
-        self.screen.sort_method.counter = 8  # Setting counter to be larger than the length of self.blocks
+        self.screen.set_sorting_method(
+            "Selection Sort"
+        )  # Insertion Sort would flag "screen.extra_loop" to True.
+        self.screen.sort_method.counter = (
+            8  # Setting counter to be larger than the length of self.blocks
+        )
         button_mock = [True]
 
-        with patch('pygame.event.get', return_value=[
-            pygame.event.Event(pygame.MOUSEBUTTONDOWN, {'button': 1, 'pos': (100, 100)})
-        ]), \
-                patch.object(Button, 'check_button_clicked', side_effect=button_mock):
+        with patch(
+            "pygame.event.get",
+            return_value=[
+                pygame.event.Event(
+                    pygame.MOUSEBUTTONDOWN, {"button": 1, "pos": (100, 100)}
+                )
+            ],
+        ), patch.object(Button, "check_button_clicked", side_effect=button_mock):
             assert self.screen.extra_loop is False
             assert self.screen.complete is False
             self.screen.event_handler()
@@ -433,14 +483,22 @@ class TestScreen(unittest.TestCase):
         self.screen.create_board()
         self.screen.create_blocks()
         self.screen.create_index_arrow()
-        self.screen.set_sorting_method("Insertion Sort")  # Insertion Sort would flag "screen.extra_loop" to True.
-        self.screen.sort_method.counter = 8  # Setting counter to be larger than the length of self.blocks
+        self.screen.set_sorting_method(
+            "Insertion Sort"
+        )  # Insertion Sort would flag "screen.extra_loop" to True.
+        self.screen.sort_method.counter = (
+            8  # Setting counter to be larger than the length of self.blocks
+        )
         button_mock = [True]
 
-        with patch('pygame.event.get', return_value=[
-            pygame.event.Event(pygame.MOUSEBUTTONDOWN, {'button': 1, 'pos': (100, 100)})
-        ]), \
-                patch.object(Button, 'check_button_clicked', side_effect=button_mock):
+        with patch(
+            "pygame.event.get",
+            return_value=[
+                pygame.event.Event(
+                    pygame.MOUSEBUTTONDOWN, {"button": 1, "pos": (100, 100)}
+                )
+            ],
+        ), patch.object(Button, "check_button_clicked", side_effect=button_mock):
             assert self.screen.extra_loop is True
             assert self.screen.complete is False
             self.screen.event_handler()

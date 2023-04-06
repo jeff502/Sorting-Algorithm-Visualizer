@@ -27,7 +27,9 @@ class Button:
         self.clicked = False
 
     def draw_button(self):
-        pygame.draw.rect(self.window, self.bottom_color, self.bottom_rect, border_radius=12)
+        pygame.draw.rect(
+            self.window, self.bottom_color, self.bottom_rect, border_radius=12
+        )
         pygame.draw.rect(self.window, self.top_color, self.top_rect, border_radius=12)
         self.window.blit(self.text_surf, self.text_rect)
         self.check_button_clicked()
